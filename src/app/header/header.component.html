@@ -1,0 +1,69 @@
+ <!-- Mob header -->
+ <div class="mob-header">
+    <div class="mob-h-left">
+        <a class="navbar-brand" href="javascript:">
+            <img class="logo-dark" title="" alt="" src="assets/img/logo.svg">
+            <img class="logo-light" title="" alt="" src="assets/img/logo-light.svg">
+        </a>
+    </div>
+    <div class="mob-h-right" (clickOutside)="onClickedOutside($event)">
+        <button class="toggler-menu" [ngClass]="{'open': sidebarOpen}" (click)="toggleMenu()">
+            <span></span>
+        </button>
+    </div>
+</div>
+<!-- End -->
+<!-- Header Top -->
+<div class="header-left-fixed one-page-nav" [ngClass]="{'menu-open menu-open-desk' : sidebarOpen}">
+    <!-- Brand -->
+    <div class="logo">
+        <a class="navbar-brand" href="javascript:">
+            <img class="logo-dark" title="" alt="" src="assets/img/logo.png">
+            <img class="logo-light" title="" alt="" src="assets/img/logo-light.svg">
+        </a>
+    </div>
+    <!-- / -->
+    <ul class="main-menu">
+        <li>
+            <a class="menu-item"  spyOn="home" activeClass="active"  href="#home" (click)="fullPageScroll('home')">
+                Home
+            </a>
+        </li>
+        <li>
+            <a class="menu-item" spyOn="sobre-mim" activeClass="active"  href="#sobre-mim" (click)="fullPageScroll('about')">
+                Sobre mim
+            </a>
+        </li>
+        <li>
+            <a class="menu-item"  spyOn="servicos" activeClass="active" href="#servicos" (click)="fullPageScroll('services')">
+                Serviços
+            </a>
+        </li>
+        <li>
+            <a class="menu-item" spyOn="trabalhos" activeClass="active"  href="#trabalhos" (click)="fullPageScroll('work')">
+                Portfolio
+            </a>
+        </li>
+        <li>
+            <a class="menu-item"  spyOn="blog" activeClass="active" href="#blog" (click)="fullPageScroll('blog')">
+                Blog
+            </a>
+        </li>
+        <li>
+            <a class="menu-item"  spyOn="contato" activeClass="active"  href="#contato" (click)="fullPageScroll('contact')">
+                Contato
+            </a>
+        </li>
+    </ul>
+    <ul class="nav social-link">
+        <li>
+            <a href="https://github.com/tuulinart"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/enzof0nseca/"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/enzofonseca/"><i class="fab fa-linkedin"></i></a>
+        </li>
+    </ul>
+</div>
